@@ -36,9 +36,13 @@ class Client extends RequestClient
         LeagueOfLegendsApiConnect::existsRegion($region);
 
         parent::__construct([
-            'base_uri' => sprintf($this->apiUri, data_get(LeagueOfLegendsApiConnect::regions(), $region, null))
+            'base_uri' => sprintf($this->apiUri, data_get(LeagueOfLegendsApiConnect::regions(), $region, null)),
+            'headers' => [
+                'User-Agent' => 'Client by Alexandre Oliveira',
+                'Client-Link' => 'github.com/alexandreo/lol-api-connect',
+                "X-Riot-Token" => $apiKey
+            ]
         ]);
-
         $this->apiKey = $apiKey;
     }
 
