@@ -71,6 +71,12 @@ class LeagueOfLegendsApiConnect
         return true;
     }
 
+    /**
+     * @param Response $response
+     * @param string $parse
+     * @return \Illuminate\Support\Collection|string
+     * @throws Exception
+     */
     static function parseResult(Response $response, string $parse = 'array')
     {
         if ($response->getStatusCode() != 200) {

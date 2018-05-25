@@ -2,7 +2,6 @@
 
 namespace Alexandreo\LolApiConnect\V3;
 
-
 use Alexandreo\LolApiConnect\Client;
 use Alexandreo\LolApiConnect\LeagueOfLegendsApiConnect;
 
