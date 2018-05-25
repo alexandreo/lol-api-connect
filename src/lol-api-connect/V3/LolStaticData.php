@@ -136,8 +136,150 @@ class LolStaticData
         return LeagueOfLegendsApiConnect::parseResult($this->client->get("/lol/static-data/v3/masteries/{$id}", $queryParameters));
     }
 
+    /**
+     * @api https://developer.riotgames.com/api-methods/#lol-static-data-v3/GET_getProfileIcons
+     * @detail Retrieve profile icons.
+     * @param array $queryParameters
+     * @return \Illuminate\Support\Collection|string
+     * @throws \Exception
+     */
+    public function profileIcons(array $queryParameters = [])
+    {
+        return LeagueOfLegendsApiConnect::parseResult($this->client->get("/lol/static-data/v3/profile-icons", $queryParameters));
+    }
 
+    /**
+     * @api https://developer.riotgames.com/api-methods/#lol-static-data-v3/GET_getRealm
+     * @detail Retrieve realm data.
+     * @return \Illuminate\Support\Collection|string
+     * @throws \Exception
+     */
+    public function realms()
+    {
+        return LeagueOfLegendsApiConnect::parseResult($this->client->get("/lol/static-data/v3/realms"));
+    }
 
+    /**
+     * @api https://developer.riotgames.com/api-methods/#lol-static-data-v3/GET_getReforgedRunePaths
+     * @detail Retrieves reforged rune path list.
+     * @param array $queryParameters
+     * @return \Illuminate\Support\Collection|string
+     * @throws \Exception
+     */
+    public function reforgedRunePaths(array $queryParameters = [])
+    {
+        return LeagueOfLegendsApiConnect::parseResult($this->client->get("/lol/static-data/v3/reforged-rune-paths", $queryParameters));
+    }
 
+    /**
+     * @api https://developer.riotgames.com/api-methods/#lol-static-data-v3/GET_getReforgedRunePathById
+     * @detail Retrieves reforged rune path by ID.
+     * @param int $id
+     * @param array $queryParameters
+     * @return \Illuminate\Support\Collection|string
+     * @throws \Exception
+     */
+    public function reforgedRunePathById(int $id, array $queryParameters = [])
+    {
+        return LeagueOfLegendsApiConnect::parseResult($this->client->get("/lol/static-data/v3/reforged-rune-paths/{$id}", $queryParameters));
+    }
+
+    /**
+     * @api https://developer.riotgames.com/api-methods/#lol-static-data-v3/GET_getReforgedRunes
+     * @detail Retrieves reforged rune list.
+     * @param array $queryParameters
+     * @return \Illuminate\Support\Collection|string
+     * @throws \Exception
+     */
+    public function reforgedRunes(array $queryParameters = [])
+    {
+        return LeagueOfLegendsApiConnect::parseResult($this->client->get("/lol/static-data/v3/reforged-runes", $queryParameters));
+    }
+
+    /**
+     * @api https://developer.riotgames.com/api-methods/#lol-static-data-v3/GET_getReforgedRuneById
+     * @detail Retrieves reforged rune by ID
+     * @param int $id
+     * @param array $queryParameters
+     * @return \Illuminate\Support\Collection|string
+     * @throws \Exception
+     */
+    public function reforgedRuneById(int $id, array $queryParameters = [])
+    {
+        return LeagueOfLegendsApiConnect::parseResult($this->client->get("/lol/static-data/v3/reforged-runes/{$id}", $queryParameters));
+    }
+
+    /**
+     * @api https://developer.riotgames.com/api-methods/#lol-static-data-v3/GET_getRuneList
+     * @detail Retrieves rune list
+     * @param array $queryParameters
+     * @return \Illuminate\Support\Collection|string
+     * @throws \Exception
+     */
+    public function runes(array $queryParameters = [])
+    {
+        return LeagueOfLegendsApiConnect::parseResult($this->client->get("/lol/static-data/v3/runes", $queryParameters));
+    }
+
+    /**
+     * @api https://developer.riotgames.com/api-methods/#lol-static-data-v3/GET_getRuneById
+     * @detail Retrieves rune by ID
+     * @param int $id
+     * @param array $queryParameters
+     * @return \Illuminate\Support\Collection|string
+     * @throws \Exception
+     */
+    public function runeById(int $id, array $queryParameters = [])
+    {
+        return LeagueOfLegendsApiConnect::parseResult($this->client->get("/lol/static-data/v3/runes/{$id}", $queryParameters));
+    }
+
+    /**
+     * @api https://developer.riotgames.com/api-methods/#lol-static-data-v3/GET_getSummonerSpellList
+     * @detail Retrieves summoner spell list.
+     * @param array $queryParameters
+     * @return \Illuminate\Support\Collection|string
+     * @throws \Exception
+     */
+    public function summonerSpells(array $queryParameters = [])
+    {
+        return LeagueOfLegendsApiConnect::parseResult($this->client->get("/lol/static-data/v3/summoner-spells", $queryParameters));
+    }
+
+    /**
+     * @api https://developer.riotgames.com/api-methods/#lol-static-data-v3/GET_getSummonerSpellById
+     * @detail Retrieves summoner spell by ID
+     * @param int $id
+     * @param array $queryParameters
+     * @return \Illuminate\Support\Collection|string
+     * @throws \Exception
+     */
+    public function summonerSpellById(int $id, array $queryParameters = [])
+    {
+        return LeagueOfLegendsApiConnect::parseResult($this->client->get("/lol/static-data/v3/summoner-spells/{$id}", $queryParameters));
+    }
+
+    /**
+     * @api https://developer.riotgames.com/api-methods/#lol-static-data-v3/GET_getFullTarballLink
+     * @detail Retrieves full tarball link.
+     * @param array $queryParameters
+     * @return string
+     * @throws \Exception
+     */
+    public function tarballLinks(array $queryParameters = [])
+    {
+        return LeagueOfLegendsApiConnect::parseResult($this->client->get("/lol/static-data/v3/tarball-links", $queryParameters), 'string');
+    }
+
+    /**
+     * @api https://developer.riotgames.com/api-methods/#lol-static-data-v3/GET_getVersions
+     * @detail Retrieve version data
+     * @return \Illuminate\Support\Collection|string
+     * @throws \Exception
+     */
+    public function versions()
+    {
+        return LeagueOfLegendsApiConnect::parseResult($this->client->get("/lol/static-data/v3/versions"));
+    }
 
 }
