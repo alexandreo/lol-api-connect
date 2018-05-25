@@ -2,7 +2,9 @@
 namespace Alexandreo\LolApiConnect;
 
 use Alexandreo\LolApiConnect\Constants\Region;
+use Alexandreo\LolApiConnect\Constants\ResponseStatus;
 use Exception;
+use GuzzleHttp\Psr7\Response;
 
 
 /**
@@ -33,12 +35,19 @@ class LeagueOfLegendsApiConnect
      * LeagueOfLegendsApiConnect constructor.
      * @param $apiKey
      */
-    public function __construct($apiKey, $region)
+    public function __construct($apiKey, $region = null)
     {
         $this->apiKey = $apiKey;
         $this->region = $region;
     }
 
+    /**
+     * @param Region $region
+     */
+    public function setRegion($region)
+    {
+        $this->region = $region;
+    }
 
     /**
      * @return array
@@ -60,6 +69,23 @@ class LeagueOfLegendsApiConnect
         }
 
         return true;
+    }
+
+    static function parseResult(Response $response, string $parse = 'array')
+    {
+        if ($response->getStatusCode() != 200) {
+            throw new Exception(data_get(ResponseStatus::getConstants(), 'HTTP_' . $response->getStatusCode()));
+        }
+
+        switch ($parse) {
+            default:
+            case 'array':
+                return collect(json_decode($response->getBody()));
+            break;
+            case 'string':
+                return (string)$response->getBody();
+            break;
+        }
     }
 
     /**
