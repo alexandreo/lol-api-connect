@@ -13,7 +13,7 @@ use Exception;
  * Class LoadaApiMethod
  * @package Alexandreo\LolApiConnect
  */
-class LoadaApiMethod
+class LoadApiMethod
 {
 
     /**
@@ -53,6 +53,5 @@ class LoadaApiMethod
 
         throw new Exception('Unable to load method');
     }
-
 
 }

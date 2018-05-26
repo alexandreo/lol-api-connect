@@ -105,7 +105,7 @@ class LeagueOfLegendsApiConnect
             return $this->V3()->$version();
         }
 
-        return new LoadaApiMethod(data_get($this->apiVersions, $version), new Client($this->apiKey, $this->region));
+        return new LoadApiMethod(data_get($this->apiVersions, $version), new Client($this->apiKey, $this->region));
     }
 
 
