@@ -23,7 +23,8 @@ class LeagueOfLegendsApiConnect
      * @var array Controle api version
      */
     private $apiVersions = [
-        'V3' => '\\Alexandreo\\LolApiConnect\\V3\\'
+        'V3' => '\\Alexandreo\\LolApiConnect\\V3\\',
+        'V4' => '\\Alexandreo\\LolApiConnect\\V4\\'
     ];
 
     /**
@@ -97,7 +98,7 @@ class LeagueOfLegendsApiConnect
     /**
      * @param $version
      * @param array $arguments
-     * @return LoadaApiMethod
+     * @return LoadApiMethod
      */
     public function __call($version, array $arguments = [])
     {

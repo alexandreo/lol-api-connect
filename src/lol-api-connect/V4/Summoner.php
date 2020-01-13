@@ -1,17 +1,17 @@
 <?php
 
-namespace Alexandreo\LolApiConnect\V3;
+
+namespace Alexandreo\LolApiConnect\V4;
 
 use Alexandreo\LolApiConnect\Client;
 use Alexandreo\LolApiConnect\LeagueOfLegendsApiConnect;
 
 /**
- * Class Champion
+ * Class Summoner
  * @package Alexandreo\LolApiConnect\V3
  */
-class Champion
+class Summoner
 {
-
     /**
      * @var Client
      */
@@ -27,14 +27,12 @@ class Champion
     }
 
     /**
-     * @api https://developer.riotgames.com/api-methods/#champion-v3/GET_getChampions
-     * @detail Retrieve all champions.
-     * @param bool $freeToPlay
+     * @param $summonerName
      * @return \Illuminate\Support\Collection|string
      * @throws \Exception
      */
-    public function championRotations()
+    public function byName($summonerName)
     {
-        return LeagueOfLegendsApiConnect::parseResult($this->client->get("/lol/platform/v3/champion-rotations"));
+        return LeagueOfLegendsApiConnect::parseResult($this->client->get("/lol/summoner/v4/summoners/by-name/{$summonerName}"));
     }
 }
