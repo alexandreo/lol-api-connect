@@ -1,6 +1,5 @@
 /vendor
-index.php
-search-summoner.php
+test/*
 .phpintel/
 .phpintel/*
 .phpintel
