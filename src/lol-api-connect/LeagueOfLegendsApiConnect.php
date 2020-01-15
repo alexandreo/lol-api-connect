@@ -103,7 +103,7 @@ class LeagueOfLegendsApiConnect
     public function __call($version, array $arguments = [])
     {
         if (!array_key_exists($version, $this->apiVersions)) {//default version
-            return $this->V3()->$version();
+            return $this->V4()->$version();
         }
 
         return new LoadApiMethod(data_get($this->apiVersions, $version), new Client($this->apiKey, $this->region));
