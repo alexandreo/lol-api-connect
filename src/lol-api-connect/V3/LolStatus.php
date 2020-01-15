@@ -28,7 +28,7 @@ class LolStatus
     }
 
     /**
-     * @api https://developer.riotgames.com/api-methods/#lol-status-v3/GET_getShardData
+     * @api https://developer.riotgames.com/apis#lol-status-v3/GET_getShardData
      * @detail Get League of Legends status for the given shard.
      * @return \Illuminate\Support\Collection|string
      * @throws \Exception

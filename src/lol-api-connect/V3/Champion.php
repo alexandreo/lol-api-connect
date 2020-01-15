@@ -27,8 +27,8 @@ class Champion
     }
 
     /**
-     * @api https://developer.riotgames.com/api-methods/#champion-v3/GET_getChampions
-     * @detail Retrieve all champions.
+     * @api https://developer.riotgames.com/apis#champion-v3/GET_getChampionInfo
+     * @detail Retrieve free week champions.
      * @param bool $freeToPlay
      * @return \Illuminate\Support\Collection|string
      * @throws \Exception

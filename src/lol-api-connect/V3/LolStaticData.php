@@ -8,6 +8,7 @@ use Alexandreo\LolApiConnect\LeagueOfLegendsApiConnect;
 /**
  * Class LolStaticData
  * @package Alexandreo\LolApiConnect\V3
+ * @deprecated
  */
 class LolStaticData
 {
@@ -32,6 +33,7 @@ class LolStaticData
      * @param array $parameters
      * @return \Illuminate\Support\Collection|string
      * @throws \Exception
+     * @deprecated
      */
     public function champions(array $queryParameters = [])
     {
@@ -45,6 +47,7 @@ class LolStaticData
      * @param array $queryParameters
      * @return \Illuminate\Support\Collection|string
      * @throws \Exception
+     * @deprecated
      */
     public function championByid(int $id, array $queryParameters = [])
     {
@@ -57,6 +60,7 @@ class LolStaticData
      * @param array $queryParameters
      * @return \Illuminate\Support\Collection|string
      * @throws \Exception
+     * @deprecated
      */
     public function items(array $queryParameters = [])
     {
@@ -70,6 +74,7 @@ class LolStaticData
      * @param array $queryParameters
      * @return \Illuminate\Support\Collection|string
      * @throws \Exception
+     * @deprecated
      */
     public function itemById(int $id, array $queryParameters = [])
     {
@@ -82,6 +87,7 @@ class LolStaticData
      * @param array $queryParameters
      * @return \Illuminate\Support\Collection|string
      * @throws \Exception
+     * @deprecated
      */
     public function languageStrings(array $queryParameters = [])
     {
@@ -93,6 +99,7 @@ class LolStaticData
      * @detail Retrieve supported languages data.
      * @return \Illuminate\Support\Collection|string
      * @throws \Exception
+     * @deprecated
      */
     public function languages()
     {
@@ -105,6 +112,7 @@ class LolStaticData
      * @param array $queryParameters
      * @return \Illuminate\Support\Collection|string
      * @throws \Exception
+     * @deprecated
      */
     public function maps(array $queryParameters = [])
     {
@@ -117,6 +125,7 @@ class LolStaticData
      * @param array $queryParameters
      * @return \Illuminate\Support\Collection|string
      * @throws \Exception
+     * @deprecated
      */
     public function masteries(array $queryParameters = [])
     {
@@ -130,6 +139,7 @@ class LolStaticData
      * @param array $queryParameters
      * @return \Illuminate\Support\Collection|string
      * @throws \Exception
+     * @deprecated
      */
     public function masteryById(int $id, array $queryParameters = [])
     {
@@ -142,6 +152,7 @@ class LolStaticData
      * @param array $queryParameters
      * @return \Illuminate\Support\Collection|string
      * @throws \Exception
+     * @deprecated
      */
     public function profileIcons(array $queryParameters = [])
     {
@@ -153,6 +164,7 @@ class LolStaticData
      * @detail Retrieve realm data.
      * @return \Illuminate\Support\Collection|string
      * @throws \Exception
+     * @deprecated
      */
     public function realms()
     {
@@ -165,6 +177,7 @@ class LolStaticData
      * @param array $queryParameters
      * @return \Illuminate\Support\Collection|string
      * @throws \Exception
+     * @deprecated
      */
     public function reforgedRunePaths(array $queryParameters = [])
     {
@@ -178,6 +191,7 @@ class LolStaticData
      * @param array $queryParameters
      * @return \Illuminate\Support\Collection|string
      * @throws \Exception
+     * @deprecated
      */
     public function reforgedRunePathById(int $id, array $queryParameters = [])
     {
@@ -190,6 +204,7 @@ class LolStaticData
      * @param array $queryParameters
      * @return \Illuminate\Support\Collection|string
      * @throws \Exception
+     * @deprecated
      */
     public function reforgedRunes(array $queryParameters = [])
     {
@@ -203,6 +218,7 @@ class LolStaticData
      * @param array $queryParameters
      * @return \Illuminate\Support\Collection|string
      * @throws \Exception
+     * @deprecated
      */
     public function reforgedRuneById(int $id, array $queryParameters = [])
     {
@@ -215,6 +231,7 @@ class LolStaticData
      * @param array $queryParameters
      * @return \Illuminate\Support\Collection|string
      * @throws \Exception
+     * @deprecated
      */
     public function runes(array $queryParameters = [])
     {
@@ -228,6 +245,7 @@ class LolStaticData
      * @param array $queryParameters
      * @return \Illuminate\Support\Collection|string
      * @throws \Exception
+     * @deprecated
      */
     public function runeById(int $id, array $queryParameters = [])
     {
@@ -240,6 +258,7 @@ class LolStaticData
      * @param array $queryParameters
      * @return \Illuminate\Support\Collection|string
      * @throws \Exception
+     * @deprecated
      */
     public function summonerSpells(array $queryParameters = [])
     {
@@ -253,6 +272,7 @@ class LolStaticData
      * @param array $queryParameters
      * @return \Illuminate\Support\Collection|string
      * @throws \Exception
+     * @deprecated
      */
     public function summonerSpellById(int $id, array $queryParameters = [])
     {
@@ -265,6 +285,7 @@ class LolStaticData
      * @param array $queryParameters
      * @return string
      * @throws \Exception
+     * @deprecated
      */
     public function tarballLinks(array $queryParameters = [])
     {
@@ -276,6 +297,7 @@ class LolStaticData
      * @detail Retrieve version data
      * @return \Illuminate\Support\Collection|string
      * @throws \Exception
+     * @deprecated
      */
     public function versions()
     {

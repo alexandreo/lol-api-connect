@@ -1,13 +1,14 @@
 <?php
 
-namespace Alexandreo\LolApiConnect\V3;
+    namespace Alexandreo\LolApiConnect\V4;
 
 use Alexandreo\LolApiConnect\Client;
 use Alexandreo\LolApiConnect\LeagueOfLegendsApiConnect;
 
 /**
  * Class Spectator
- * @package Alexandreo\LolApiConnect\V3
+ * @package Alexandreo\LolApiConnect\V4
+ * @deprecated
  */
 class Spectator
 {
@@ -27,7 +28,7 @@ class Spectator
     }
 
     /**
-     * @api https://developer.riotgames.com/api-methods/#spectator-v3/GET_getCurrentGameInfoBySummoner
+     * @api https://developer.riotgames.com/apis#spectator-v4/GET_getCurrentGameInfoBySummoner
      * @detail Get current game information for the given summoner ID.
      * @param string $summonerId
      * @return \Illuminate\Support\Collection|string
@@ -35,18 +36,18 @@ class Spectator
      */
     public function activeGameBySummonerId(string $summonerId)
     {
-        return LeagueOfLegendsApiConnect::parseResult($this->client->get("/lol/spectator/v3/active-games/by-summoner/{$summonerId}"));
+        return LeagueOfLegendsApiConnect::parseResult($this->client->get("/lol/spectator/v4/active-games/by-summoner/{$summonerId}"));
     }
 
     /**
-     * @api https://developer.riotgames.com/api-methods/#spectator-v3/GET_getFeaturedGames
+     * @api https://developer.riotgames.com/apis#spectator-v4/GET_getFeaturedGames
      * @detail Get list of featured games.
      * @return \Illuminate\Support\Collection|string
      * @throws \Exception
      */
     public function featuredGames()
     {
-        return LeagueOfLegendsApiConnect::parseResult($this->client->get("/lol/spectator/v3/featured-games"));
+        return LeagueOfLegendsApiConnect::parseResult($this->client->get("/lol/spectator/v4/featured-games"));
     }
 
 

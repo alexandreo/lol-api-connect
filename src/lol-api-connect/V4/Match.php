@@ -1,13 +1,13 @@
 <?php
 
-namespace Alexandreo\LolApiConnect\V3;
+namespace Alexandreo\LolApiConnect\V4;
 
 use Alexandreo\LolApiConnect\Client;
 use Alexandreo\LolApiConnect\LeagueOfLegendsApiConnect;
 
 /**
  * Class Match
- * @package Alexandreo\LolApiConnect\V3
+ * @package Alexandreo\LolApiConnect\V4
  */
 class Match
 {
@@ -27,19 +27,19 @@ class Match
     }
 
     /**
-     * @api https://developer.riotgames.com/api-methods/#match-v3/GET_getMatch
+     * @api https://developer.riotgames.com/apis#match-v4/GET_getMatch
      * @detail Get match by match ID.
      * @param string $matchId
      * @return \Illuminate\Support\Collection|string
      * @throws \Exception
      */
-    public function matcheById(string $matchId)
+    public function matchById(string $matchId)
     {
-        return LeagueOfLegendsApiConnect::parseResult($this->client->get("/lol/match/v3/matches/{$matchId}"));
+        return LeagueOfLegendsApiConnect::parseResult($this->client->get("/lol/match/v4/matches/{$matchId}"));
     }
 
     /**
-     * @api https://developer.riotgames.com/api-methods/#match-v3/GET_getMatchlist
+     * @api https://developer.riotgames.com/apis#match-v4/GET_getMatchlist
      * @detail Get matchlist for games played on given account ID and platform ID and filtered using given filter parameters, if any.
      * @param int $accountId
      * @param array $queryParameters
@@ -48,11 +48,11 @@ class Match
      */
     public function matchListByAccount(string $accountId, array $queryParameters = [])
     {
-        return LeagueOfLegendsApiConnect::parseResult($this->client->get("/lol/match/v3/matchlists/by-account/{$accountId}", $queryParameters));
+        return LeagueOfLegendsApiConnect::parseResult($this->client->get("/lol/match/v4/matchlists/by-account/{$accountId}", $queryParameters));
     }
 
     /**
-     * @api https://developer.riotgames.com/api-methods/#match-v3/GET_getMatchTimeline
+     * @api https://developer.riotgames.com/apis#match-v4/GET_getMatchTimeline
      * @detail Get match timeline by match ID.
      * @param string $matchId
      * @return \Illuminate\Support\Collection|string
@@ -60,11 +60,11 @@ class Match
      */
     public function timeLineByMatch(string $matchId)
     {
-        return LeagueOfLegendsApiConnect::parseResult($this->client->get("/lol/match/v3/timelines/by-match/{$matchId}"));
+        return LeagueOfLegendsApiConnect::parseResult($this->client->get("/lol/match/v4/timelines/by-match/{$matchId}"));
     }
 
     /**
-     * @api https://developer.riotgames.com/api-methods/#match-v3/GET_getMatchIdsByTournamentCode
+     * @api https://developer.riotgames.com/apis#match-v4/GET_getMatchIdsByTournamentCode
      * @detail Get match IDs by tournament code.
      * @param string $tournamentCode
      * @return \Illuminate\Support\Collection|string
@@ -72,11 +72,11 @@ class Match
      */
     public function matchByTournamentCode(string $tournamentCode)
     {
-        return LeagueOfLegendsApiConnect::parseResult($this->client->get("/lol/match/v3/matches/by-tournament-code/{$tournamentCode}/ids"));
+        return LeagueOfLegendsApiConnect::parseResult($this->client->get("/lol/match/v4/matches/by-tournament-code/{$tournamentCode}/ids"));
     }
 
     /**
-     * @api https://developer.riotgames.com/api-methods/#match-v3/GET_getMatchByTournamentCode
+     * @api https://developer.riotgames.com/apis#match-v4/GET_getMatchByTournamentCode
      * @detail Get match by match ID and tournament code.
      * @param string $matchId
      * @param string $tournamentCode
@@ -85,7 +85,7 @@ class Match
      */
     public function matchByIdAndByTournamentCode(string $matchId, string $tournamentCode)
     {
-        return LeagueOfLegendsApiConnect::parseResult($this->client->get("/lol/match/v3/matches/{$matchId}/by-tournament-code/{$tournamentCode}"));
+        return LeagueOfLegendsApiConnect::parseResult($this->client->get("/lol/match/v4/matches/{$matchId}/by-tournament-code/{$tournamentCode}"));
     }
 
 }
